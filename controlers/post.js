@@ -23,7 +23,7 @@ exports.getPost = (req,res) => {
     Post.find()
     .skip(skip)
     .limit(10)
-    .sort({ _id : 'desc' })
+    .sort({ postTitle : 'desc' })
     .exec((err, post) => {
         if(err) {
             return res.status(400).json({
